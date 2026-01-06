@@ -10,215 +10,376 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     
     <style>
-        /* ESTILOS GENERALES CON FONDO ROSADO */
+        /* RESET Y ESTILOS GENERALES */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body { 
-            background-color: #fff5f7; 
-            color: #5a3d3d; 
+            background-color: #fff5f7;  /* CAMBIADO: Negro (#0a0a0a) -> Rosa claro (#fff5f7) */
+            color: #5a3d3d;             /* CAMBIADO: Blanco (#f0f0f0) -> Marrón rosado (#5a3d3d) */
             line-height: 1.6;
             font-family: 'Lato', sans-serif;
         }
         
         .container { 
             width: 90%; 
-            max-width: 1000px; 
+            max-width: 1200px; 
             margin: 0 auto; 
-            padding: 20px; 
+            padding: 0 20px; 
         }
         
-        h1, h2, h3 {
+        h1, h2, h3, h4 {
             font-family: 'Playfair Display', serif;
             font-weight: 700;
         }
-
-        /* HEADER ROSADO */
+        
+        /* HEADER */
         header { 
-            background: linear-gradient(to right, #ffb6c1, #ff99aa);
+            background: #ffb6c1;        /* CAMBIADO: Negro (#000) -> Rosa claro (#ffb6c1) */
             padding: 25px 0; 
-            border-bottom: 3px solid #d87093; 
+            border-bottom: 2px solid #d87093; /* CAMBIADO: Dorado (#d4af37) -> Rosa fuerte (#d87093) */
             text-align: center; 
         }
         
         header h1 { 
-            color: #8b475d; 
+            color: #8b475d;             /* CAMBIADO: Dorado (#d4af37) -> Rosa vino (#8b475d) */
             font-size: 2rem; 
             margin-bottom: 5px; 
             letter-spacing: 0.5px;
         }
         
         header p { 
-            color: #a0526a; 
+            color: #a0526a;             /* CAMBIADO: Gris (#ccc) -> Rosa medio (#a0526a) */
             font-size: 1rem; 
             font-style: italic;
         }
-
+        
         /* HERO SECTION */
         .hero { 
-            background: linear-gradient(rgba(255, 182, 193, 0.8), rgba(255, 182, 193, 0.9)), 
+            background: linear-gradient(rgba(255, 182, 193, 0.7), rgba(255, 182, 193, 0.8)), /* CAMBIADO: Overlay negro a rosa */
                         url('https://i.ibb.co/S4vZFTC5/IMG-4284.jpg');
             background-size: cover;
             background-position: center;
-            padding: 80px 20px;
+            background-repeat: no-repeat;
+            padding: 120px 20px;
             text-align: center;
-            border-bottom: 1px solid #ffb6c1;
+            border-bottom: 1px solid #ffb6c1; /* CAMBIADO: Gris (#333) -> Rosa claro (#ffb6c1) */
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.85); /* CAMBIADO: Negro semitransparente a Blanco semitransparente */
+            padding: 40px;
+            border-radius: 10px;
+            border: 1px solid rgba(216, 112, 147, 0.3); /* CAMBIADO: Dorado a Rosa (#d87093) */
         }
         
         .hero h2 { 
-            font-size: 2.5rem; 
-            margin-bottom: 15px; 
-            color: #8b475d;
-            text-shadow: 1px 1px 3px rgba(255,255,255,0.7);
+            font-size: 3.2rem; 
+            margin-bottom: 20px; 
+            color: #8b475d;             /* CAMBIADO: Blanco (#fff) -> Rosa vino (#8b475d) */
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
         .hero p { 
-            font-size: 1.2rem; 
-            max-width: 700px; 
-            margin: 0 auto 25px; 
-            color: #5a3d3d;
+            font-size: 1.3rem; 
+            margin: 0 auto 35px; 
+            color: #5a3d3d;             /* CAMBIADO: Gris claro (#eee) -> Marrón rosado (#5a3d3d) */
+            line-height: 1.8;
         }
         
         .btn { 
             display: inline-block; 
-            background: #d87093; 
-            color: white; 
-            padding: 12px 30px; 
+            background: #d87093;         /* CAMBIADO: Dorado (#d4af37) -> Rosa fuerte (#d87093) */
+            color: white;                /* CAMBIADO: Negro (#000) -> Blanco */
+            padding: 15px 40px; 
             text-decoration: none; 
             border-radius: 30px; 
             font-weight: bold; 
-            border: 2px solid #d87093; 
+            border: 2px solid #d87093;   /* CAMBIADO: Dorado (#d4af37) -> Rosa fuerte (#d87093) */
             transition: all 0.3s;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            margin-top: 20px;
         }
         
         .btn:hover { 
-            background: white; 
-            color: #d87093; 
+            background: transparent; 
+            color: #d87093;              /* CAMBIADO: Dorado (#d4af37) -> Rosa fuerte (#d87093) */
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(216, 112, 147, 0.2);
+            box-shadow: 0 10px 20px rgba(216, 112, 147, 0.2); /* CAMBIADO: Sombra dorada a rosa */
         }
-
-        /* CATÁLOGO */
-        .catalog { 
-            padding: 70px 0; 
-            background-color: #ffe6ea;
-            border-top: 1px solid #ffb6c1;
+        
+        /* GALERÍA DE IMÁGENES */
+        .gallery-section {
+            padding: 80px 0;
+            background: #ffe6ea;         /* CAMBIADO: Gris muy oscuro (#0f0f0f) -> Rosa muy claro (#ffe6ea) */
+            border-top: 1px solid #ffb6c1; /* CAMBIADO: Gris oscuro (#222) -> Rosa claro (#ffb6c1) */
             border-bottom: 1px solid #ffb6c1;
+        }
+        
+        .gallery-section h2 {
+            text-align: center;
+            color: #8b475d;             /* CAMBIADO: Dorado (#d4af37) -> Rosa vino (#8b475d) */
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+        
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            height: 300px;
+            transition: transform 0.3s;
+            border: 1px solid #ffb6c1;   /* CAMBIADO: Gris (#333) -> Rosa claro (#ffb6c1) */
+            box-shadow: 0 5px 15px rgba(139, 71, 93, 0.1); /* Sombra rosada */
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            border-color: #d87093;       /* CAMBIADO: Dorado (#d4af37) -> Rosa fuerte (#d87093) */
+            box-shadow: 0 15px 30px rgba(216, 112, 147, 0.15); /* Sombra rosa más intensa */
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* SECCIÓN "ELEGANCIA QUE DEJA HUELLA" */
+        .elegance-section {
+            padding: 100px 0;
+            background: #fff0f5;         /* CAMBIADO: Gris oscuro (#111) -> Rosa lavanda blush (#fff0f5) */
+            border-bottom: 1px solid #ffb6c1;
+        }
+        
+        .elegance-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .elegance-content h2 {
+            color: #8b475d;             /* CAMBIADO: Dorado (#d4af37) -> Rosa vino (#8b475d) */
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .elegance-content h2:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 2px;
+            background: #d87093;         /* CAMBIADO: Dorado (#d4af37) -> Rosa fuerte (#d87093) */
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .text-block {
+            background: rgba(255, 255, 255, 0.9); /* CAMBIADO: Gris oscuro semitransparente a Blanco semitransparente */
+            padding: 50px;
+            border-radius: 10px;
+            border-left: 4px solid #d87093; /* CAMBIADO: Dorado (#d4af37) -> Rosa fuerte (#d87093) */
+            margin-bottom: 50px;
+            text-align: left;
+            box-shadow: 0 5px 20px rgba(139, 71, 93, 0.08); /* Sombra suave rosada */
+        }
+        
+        .text-block p {
+            margin-bottom: 25px;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #5a3d3d;             /* CAMBIADO: Texto por defecto a Marrón rosado (#5a3d3d) */
+        }
+        
+        .text-block strong {
+            color: #d87093;             /* CAMBIADO: Dorado (#d4af37) -> Rosa fuerte (#d87093) */
+            font-weight: 700;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+        
+        .benefit-item {
+            background: white;           /* CAMBIADO: Gris oscuro semitransparente a Blanco sólido */
+            padding: 35px 25px;
+            border-radius: 8px;
+            border-top: 3px solid #d87093; /* CAMBIADO: Dorado (#d4af37) -> Rosa fuerte (#d87093) */
+            text-align: center;
+            transition: transform 0.3s;
+            box-shadow: 0 5px 15px rgba(139, 71, 93, 0.1);
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-10px);
+            background: white;           /* Fondo blanco mantenido */
+            box-shadow: 0 15px 30px rgba(216, 112, 147, 0.15);
+        }
+        
+        .benefit-item h3 {
+            color: #d87093;             /* CAMBIADO: Dorado (#d4af37) -> Rosa fuerte (#d87093) */
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .benefit-item p {
+            color: #5a3d3d;             /* CAMBIADO: Texto por defecto a Marrón rosado (#5a3d3d) */
+        }
+        
+        /* CATÁLOGO DE PERFUMES */
+        .catalog { 
+            padding: 100px 0; 
+            background-color: #ffe6ea;   /* CAMBIADO: Negro (#0a0a0a) -> Rosa muy claro (#ffe6ea) */
         }
         
         .catalog h2 { 
             text-align: center; 
-            font-size: 2.5rem; 
-            margin-bottom: 10px; 
-            color: #8b475d; 
+            font-size: 2.8rem; 
+            margin-bottom: 15px; 
+            color: #8b475d;             /* CAMBIADO: Dorado (#d4af37) -> Rosa vino (#8b475d) */
         }
         
         .section-subtitle { 
             text-align: center; 
-            color: #a0526a; 
-            margin-bottom: 40px;
-            font-size: 1.1rem;
+            color: #a0526a;             /* CAMBIADO: Gris (#aaa) -> Rosa medio (#a0526a) */
+            margin-bottom: 60px;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .perfume-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 25px; 
+            gap: 35px; 
         }
         
         .perfume-card { 
-            background: white; 
-            border-radius: 10px; 
+            background: white;           /* CAMBIADO: Gris oscuro (#1e1e1e) -> Blanco */
+            border-radius: 12px; 
             overflow: hidden; 
-            border: 2px solid #ffb6c1;
-            transition: transform 0.3s;
-            box-shadow: 0 5px 15px rgba(139, 71, 93, 0.1);
+            border: 1px solid #ffb6c1;   /* CAMBIADO: Gris (#333) -> Rosa claro (#ffb6c1) */
+            transition: all 0.3s;
+            position: relative;
+            box-shadow: 0 5px 20px rgba(139, 71, 93, 0.1);
         }
         
         .perfume-card:hover { 
-            transform: translateY(-5px); 
-            border-color: #d87093;
-            box-shadow: 0 10px 25px rgba(216, 112, 147, 0.2);
+            transform: translateY(-10px); 
+            border-color: #d87093;       /* CAMBIADO: Dorado (#d4af37) -> Rosa fuerte (#d87093) */
+            box-shadow: 0 15px 30px rgba(216, 112, 147, 0.2);
         }
         
         .perfume-img { 
-            height: 200px; 
+            height: 250px; 
             overflow: hidden; 
-            background: #ffe6ea; 
+            background: #ffe6ea;         /* CAMBIADO: Gris (#2a2a2a) -> Rosa muy claro (#ffe6ea) */
         }
         
         .perfume-img img { 
             width: 100%; 
             height: 100%; 
             object-fit: cover; 
+            transition: transform 0.5s;
+        }
+        
+        .perfume-card:hover .perfume-img img {
+            transform: scale(1.05);
         }
         
         .perfume-info { 
-            padding: 20px; 
+            padding: 25px; 
         }
         
         .perfume-info h3 { 
-            color: #8b475d; 
-            margin-bottom: 10px; 
-            font-size: 1.4rem; 
+            color: #8b475d;             /* CAMBIADO: Blanco (#fff) -> Rosa vino (#8b475d) */
+            margin-bottom: 12px; 
+            font-size: 1.6rem; 
         }
         
         .perfume-info p { 
-            color: #5a3d3d; 
-            margin-bottom: 20px; 
-            font-size: 0.95rem; 
+            color: #5a3d3d;             /* CAMBIADO: Gris claro (#bbb) -> Marrón rosado (#5a3d3d) */
+            margin-bottom: 25px; 
+            font-size: 1rem; 
+            line-height: 1.7;
         }
         
         .btn-card { 
-            background: #d87093; 
-            color: white; 
-            padding: 10px 20px; 
+            background: #d87093;         /* CAMBIADO: Gris (#333) -> Rosa fuerte (#d87093) */
+            color: white;                /* CAMBIADO: Blanco (#fff) -> Blanco */
+            padding: 12px 25px; 
             text-decoration: none; 
             border-radius: 5px; 
             display: inline-block; 
-            border: 1px solid #d87093; 
+            border: 1px solid #d87093;   /* CAMBIADO: Gris oscuro (#444) -> Rosa fuerte (#d87093) */
             transition: all 0.3s; 
             font-weight: bold;
+            letter-spacing: 0.5px;
         }
         
         .btn-card:hover { 
             background: white; 
-            color: #d87093; 
+            color: #d87093;              /* CAMBIADO: Dorado (#d4af37) -> Rosa fuerte (#d87093) */
             border-color: #d87093; 
         }
-
-        /* CONTACTO */
+        
+        /* SECCIÓN DE CONTACTO */
         .contact { 
-            padding: 70px 0; 
+            padding: 80px 0; 
             text-align: center; 
-            background: #ffb6c1;
+            background: #ffb6c1;         /* CAMBIADO: Negro (#000) -> Rosa claro (#ffb6c1) */
             border-top: 1px solid #d87093;
         }
         
         .contact h2 { 
-            color: #8b475d; 
-            margin-bottom: 15px; 
-            font-size: 2.2rem;
+            color: #8b475d;             /* CAMBIADO: Dorado (#d4af37) -> Rosa vino (#8b475d) */
+            margin-bottom: 20px; 
+            font-size: 2.5rem;
         }
         
         .contact p {
             max-width: 700px;
             margin: 0 auto 40px;
             font-size: 1.1rem;
-            color: #5a3d3d;
+            color: #5a3d3d;             /* CAMBIADO: Gris claro (#ccc) -> Marrón rosado (#5a3d3d) */
         }
         
         .contact-links { 
-            margin-top: 20px; 
+            margin-top: 30px; 
         }
         
         .contact-links a { 
             display: inline-block; 
-            margin: 0 10px; 
-            color: #8b475d; 
+            margin: 0 15px; 
+            color: #8b475d;             /* CAMBIADO: Dorado (#d4af37) -> Rosa vino (#8b475d) */
             text-decoration: none; 
             font-size: 1.1rem; 
-            border: 1px solid #8b475d; 
-            padding: 10px 20px; 
+            border: 1px solid #8b475d;   /* CAMBIADO: Dorado (#d4af37) -> Rosa vino (#8b475d) */
+            padding: 12px 25px; 
             border-radius: 5px; 
             transition: all 0.3s; 
             font-weight: bold;
@@ -226,39 +387,72 @@
         }
         
         .contact-links a:hover { 
-            background: #8b475d; 
+            background: #8b475d;         /* CAMBIADO: Dorado (#d4af37) -> Rosa vino (#8b475d) */
             color: white; 
         }
-
-        /* FOOTER CON AVISO LEGAL */
+        
+        /* FOOTER */
         footer { 
-            padding: 40px 0; 
+            padding: 50px 0; 
             text-align: center; 
-            background: #ffa8b5; 
-            color: #5a3d3d; 
-            border-top: 1px solid #d87093;
-            font-size: 0.85rem; 
-            line-height: 1.5;
+            background: #ffa8b5;         /* CAMBIADO: Negro azabache (#050505) -> Rosa medio (#ffa8b5) */
+            color: #5a3d3d;              /* CAMBIADO: Gris (#777) -> Marrón rosado (#5a3d3d) */
+            border-top: 1px solid #d87093; 
+            font-size: 0.9rem; 
+            line-height: 1.6;
         }
         
         .legal { 
-            max-width: 800px; 
+            max-width: 900px; 
             margin: 0 auto; 
         }
         
         .legal p {
             margin-bottom: 15px;
         }
-
+        
         /* RESPONSIVE */
         @media (max-width: 768px) {
-            .hero h2 { font-size: 2rem; }
-            .hero p { font-size: 1.1rem; }
-            .catalog h2 { font-size: 2rem; }
-            .perfume-grid { grid-template-columns: 1fr; }
+            .hero { 
+                padding: 80px 20px;
+                min-height: 60vh;
+            }
+            
+            .hero h2 { 
+                font-size: 2.3rem; 
+            }
+            
+            .hero-content {
+                padding: 25px;
+            }
+            
+            .hero p { 
+                font-size: 1.1rem; 
+            }
+            
+            .elegance-content h2 { 
+                font-size: 2.2rem; 
+            }
+            
+            .text-block { 
+                padding: 30px 20px; 
+            }
+            
+            .benefits-grid { 
+                grid-template-columns: 1fr; 
+            }
+            
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-item {
+                height: 250px;
+            }
+            
             .contact-links a { 
                 display: block; 
-                margin: 10px auto; 
+                margin: 15px auto; 
                 max-width: 300px; 
             }
         }
@@ -268,6 +462,7 @@
     <!-- HEADER -->
     <header>
         <div class="container">
+            <!-- CAMBIADO: Nombre por uno genérico para afiliada -->
             <h1>Afiliada Oficial de Perfumes Chogan</h1>
             <p>Representante autorizada - Ventas oficiales</p>
         </div>
@@ -276,20 +471,80 @@
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="container">
-            <h2>Descubre el Lujo de los Perfumes Chogan</h2>
-            <p>Tu fragancia de élite, a un clic de distancia. Compra seguro a través de nuestro enlace oficial.</p>
-            <a href="#catalogo" class="btn">Ver Colección Exclusiva</a>
+            <div class="hero-content">
+                <h2>Perfumes Chogan</h2>
+                <p>Elegancia que deja huella. Descubre fragancias italianas de alta concentración, elaboradas para quienes buscan sofisticación y personalidad.</p>
+                <a href="#catalogo" class="btn">Explorar la Colección</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERÍA DE IMÁGENES -->
+    <section class="gallery-section">
+        <div class="container">
+            <h2>✨ La Esencia Visual Chogan ✨</h2>
+            <p style="text-align: center; color: #a0526a; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Descubre la belleza y sofisticación detrás de cada fragancia Chogan
+            </p>
+            
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="https://i.ibb.co/kVMBdDBt/IMG-4287.jpg" alt="Perfume Chogan - Vista frontal elegante">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.ibb.co/Wvdtqp2M/IMG-4286.jpg" alt="Perfume Chogan - Detalle de la botella">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.ibb.co/RG80sDCk/IMG-4283.jpg" alt="Colección Chogan - Presentación de lujo">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.ibb.co/9mS3phL9/IMG-4285.jpg" alt="Perfume Chogan - Diseño sofisticado">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN "ELEGANCIA QUE DEJA HUELLA" -->
+    <section class="elegance-section">
+        <div class="container">
+            <div class="elegance-content">
+                <h2>✨ Elegancia que deja huella ✨</h2>
+                
+                <div class="text-block">
+                    <p>Los perfumes Chogan representan la perfecta unión entre <strong>calidad, elegancia y personalidad</strong>. Inspirados en las grandes fragancias de la perfumería internacional, están elaborados en Italia con esencias concentradas de alta calidad, pensadas para quienes buscan un aroma <strong>duradero y sofisticado</strong>.</p>
+                    
+                    <p>Cada fragancia está diseñada para <strong>resaltar la esencia de quien la lleva</strong>, acompañándolo en cada momento del día con un aroma envolvente, equilibrado y memorable.</p>
+                </div>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <h3>Fijación Prolongada</h3>
+                        <p>Una fragancia que perdura desde la mañana hasta la noche, manteniendo su carácter distintivo.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3>Evolución Aromática Elegante</h3>
+                        <p>Notas que se transforman armoniosamente sobre la piel, creando una experiencia olfativa única.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3>Intenso pero Armonioso</h3>
+                        <p>Un perfume con carácter que nunca resulta invasivo, perfecto para cualquier ocasión.</p>
+                    </div>
+                </div>
+                
+                <p style="margin-top: 50px; font-size: 1.2rem; color: #a0526a; font-style: italic;">
+                    Desde notas frescas y ligeras hasta acordes intensos y sensuales, la colección Chogan se adapta a <strong>todos los estilos, personalidades y ocasiones</strong>.
+                </p>
+            </div>
         </div>
     </section>
 
     <!-- CATÁLOGO DE PERFUMES -->
     <section id="catalogo" class="catalog">
         <div class="container">
-            <h2>Colección Destacada</h2>
-            <p class="section-subtitle">Selección de fragancias inspiradas en acordes olfativos de lujo.</p>
+            <h2>Colección Exclusiva</h2>
+            <p class="section-subtitle">Fragancias inspiradas en acordes olfativos de lujo, elaboradas con esencias concentradas de alta calidad.</p>
 
             <div class="perfume-grid">
-                <!-- CHOGAN NOIR -->
                 <div class="perfume-card">
                     <div class="perfume-img">
                         <img src="https://i.ibb.co/tMR7XkC9/ef7e686c-7c4b-4a2e-b15d-d4d45cfeb5ae.jpg" alt="Chogan Noir - Fragancia intensa con notas de pachulí y ámbar">
@@ -297,11 +552,11 @@
                     <div class="perfume-info">
                         <h3>Chogan Noir</h3>
                         <p>Una fragancia intensa y misteriosa con notas profundas de pachulí, ámbar y cuero. Inspirada en acordes orientales y amaderados de alta perfumería.</p>
+                        <!-- CAMBIADO: Enlace de afiliado de tu esposa -->
                         <a href="https://www.chogangroupspa.com/referral/MAG2FEE8B/ES" class="btn-card" target="_blank">Comprar Ahora</a>
                     </div>
                 </div>
 
-                <!-- CHOGAN BLANC -->
                 <div class="perfume-card">
                     <div class="perfume-img">
                         <img src="https://i.ibb.co/CpqZHzqy/9c9c10fa-c29b-47fb-8046-3b9dad2be42b.jpg" alt="Chogan Blanc - Fragancia fresca con notas cítricas y florales">
@@ -309,11 +564,11 @@
                     <div class="perfume-info">
                         <h3>Chogan Blanc</h3>
                         <p>Frescura y luminosidad encapsuladas. Notas cítricas de bergamota, un corazón floral suave y un fondo de musk blanco. Evoca elegancia moderna.</p>
+                        <!-- CAMBIADO: Enlace de afiliado de tu esposa -->
                         <a href="https://www.chogangroupspa.com/referral/MAG2FEE8B/ES" class="btn-card" target="_blank">Comprar Ahora</a>
                     </div>
                 </div>
 
-                <!-- CHOGAN OUD -->
                 <div class="perfume-card">
                     <div class="perfume-img">
                         <img src="https://i.ibb.co/9mBvxCwv/IMG-4172.jpg" alt="Chogan Oud - Fragancia opulenta con oud y especias">
@@ -321,11 +576,12 @@
                     <div class="perfume-info">
                         <h3>Chogan Oud</h3>
                         <p>La opulencia hecha fragancia. Combina la riqueza del oud con especias dulces, rosas oscuras y un toque de vainilla. Para ocasiones especiales.</p>
+                        <!-- CAMBIADO: Enlace de afiliado de tu esposa -->
                         <a href="https://www.chogangroupspa.com/referral/MAG2FEE8B/ES" class="btn-card" target="_blank">Comprar Ahora</a>
                     </div>
                 </div>
 
-                <!-- LUXURY LINE -->
+                <!-- PERFUME LUXURY LINE -->
                 <div class="perfume-card">
                     <div class="perfume-img">
                         <img src="https://i.ibb.co/Ld63jfjq/IMG-4275.jpg" alt="Chogan Luxury Line - Fragancia sofisticada con notas de sándalo y azahar">
@@ -333,6 +589,7 @@
                     <div class="perfume-info">
                         <h3>LUXURY LINE</h3>
                         <p>Una fragancia sofisticada con notas de sándalo y azahar, creada para quienes buscan elegancia atemporal.</p>
+                        <!-- CAMBIADO: Enlace de afiliado de tu esposa -->
                         <a href="https://www.chogangroupspa.com/referral/MAG2FEE8B/ES" class="btn-card" target="_blank">Comprar Ahora</a>
                     </div>
                 </div>
@@ -346,18 +603,21 @@
             <h2>¿Necesitas Ayuda para Elegir?</h2>
             <p>Contáctanos para asesoría personalizada sobre las fragancias.</p>
             <div class="contact-links">
+                <!-- CAMBIADO: Email de tu esposa -->
                 <a href="mailto:ladron73@outlook.com">📧 ladron73@outlook.com</a>
+                <!-- CAMBIADO: WhatsApp de tu esposa -->
                 <a href="https://wa.me/4915223288562" target="_blank">📱 +49 1522 3288562</a>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER CON AVISO LEGAL -->
+    <!-- FOOTER -->
     <footer>
         <div class="container">
             <div class="legal">
+                <!-- CAMBIADO: Aviso legal genérico para afiliada -->
                 <p><strong>Aviso Legal:</strong> Este sitio es operado por una afiliada independiente de Chogan. Las compras se realizan en el sitio oficial de Chogan a través de enlaces de afiliado. Este sitio recibe una comisión por ventas referidas. "Chogan" es una marca registrada. Los perfumes presentados están inspirados en acordes olfativos populares.</p>
-                <p style="margin-top:15px;">&copy; <span id="current-year">2024</span> Afiliada Oficial de Perfumes Chogan. Todos los derechos reservados.</p>
+                <p style="margin-top:20px;">&copy; <span id="current-year">2024</span> Afiliada Oficial de Perfumes Chogan. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
