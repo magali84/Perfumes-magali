@@ -3,488 +3,367 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfumes Chogan | Magali - Afiliada Oficial</title>
+    <title>Perfumes Chogan | Elegancia que deja huella | Afiliada Oficial</title>
+    <meta name="description" content="✨ Perfumes Chogan: elegancia que deja huella. Fragancias italianas de alta concentración. Compra oficial a través de nuestra afiliada autorizada. Envíos a toda Europa.">
     
-    <!-- Fuentes Google -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Fuentes elegantes -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     
     <style>
-        /* RESET Y ESTILOS BASE */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        /* ESTILOS GENERALES CON FONDO ROSADO */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #fff5f7 0%, #ffeef1 100%);
-            color: #6d4c5c;
+        body { 
+            background-color: #fff5f7; 
+            color: #5a3d3d; 
             line-height: 1.6;
-            min-height: 100vh;
+            font-family: 'Lato', sans-serif;
         }
         
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+        .container { 
+            width: 90%; 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            padding: 20px; 
         }
         
-        /* HEADER ELEGANTE */
-        header {
-            background: linear-gradient(135deg, #ffb6c1 0%, #ff99aa 100%);
-            padding: 25px 0;
-            text-align: center;
-            border-bottom: 3px solid #e75480;
-            box-shadow: 0 4px 20px rgba(231, 84, 128, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
-            background-size: 50px 50px;
-            animation: float 20s linear infinite;
-        }
-        
-        @keyframes float {
-            0% { transform: translate(0, 0) rotate(0deg); }
-            100% { transform: translate(-50px, -50px) rotate(360deg); }
-        }
-        
-        .logo {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .logo h1 {
+        h1, h2, h3 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-            margin-bottom: 10px;
-            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        /* HEADER ROSADO */
+        header { 
+            background: linear-gradient(to right, #ffb6c1, #ff99aa);
+            padding: 25px 0; 
+            border-bottom: 3px solid #d87093; 
+            text-align: center; 
         }
         
-        .logo p {
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.9);
+        header h1 { 
+            color: #8b475d; 
+            font-size: 2rem; 
+            margin-bottom: 5px; 
+            letter-spacing: 0.5px;
+        }
+        
+        header p { 
+            color: #a0526a; 
+            font-size: 1rem; 
             font-style: italic;
-            letter-spacing: 2px;
         }
-        
+
         /* HERO SECTION */
-        .hero {
-            padding: 80px 0;
+        .hero { 
+            background: linear-gradient(rgba(255, 182, 193, 0.8), rgba(255, 182, 193, 0.9)), 
+                        url('https://i.ibb.co/S4vZFTC5/IMG-4284.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
             text-align: center;
-            position: relative;
+            border-bottom: 1px solid #ffb6c1;
         }
         
-        .hero-content {
-            background: white;
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(231, 84, 128, 0.15);
-            border: 2px solid #ffb6c1;
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-            overflow: hidden;
+        .hero h2 { 
+            font-size: 2.5rem; 
+            margin-bottom: 15px; 
+            color: #8b475d;
+            text-shadow: 1px 1px 3px rgba(255,255,255,0.7);
         }
         
-        .hero-content::before {
-            content: '🌸';
-            position: absolute;
-            top: -30px;
-            left: -30px;
-            font-size: 100px;
-            opacity: 0.1;
-            z-index: 1;
-        }
-        
-        .hero h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
-            color: #e75480;
-            margin-bottom: 25px;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            color: #6d4c5c;
-            margin-bottom: 30px;
-            line-height: 1.8;
-            position: relative;
-            z-index: 2;
-        }
-        
-        /* BOTÓN PRINCIPAL */
-        .btn-primary {
-            display: inline-block;
-            background: linear-gradient(135deg, #e75480 0%, #ff6b9d 100%);
-            color: white;
-            padding: 16px 45px;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 20px rgba(231, 84, 128, 0.3);
-            position: relative;
-            z-index: 2;
-            letter-spacing: 1px;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 12px 25px rgba(231, 84, 128, 0.4);
-            background: linear-gradient(135deg, #ff6b9d 0%, #e75480 100%);
-        }
-        
-        /* GALERÍA DE IMÁGENES */
-        .gallery-section {
-            padding: 60px 0;
-        }
-        
-        .gallery-section h3 {
-            font-family: 'Playfair Display', serif;
-            text-align: center;
-            font-size: 2.3rem;
-            color: #e75480;
-            margin-bottom: 40px;
-        }
-        
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-        
-        .gallery-item {
-            border-radius: 15px;
-            overflow: hidden;
-            height: 300px;
-            position: relative;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s ease;
-            border: 3px solid #ffb6c1;
-        }
-        
-        .gallery-item:hover {
-            transform: translateY(-10px) rotate(1deg);
-            box-shadow: 0 20px 40px rgba(231, 84, 128, 0.25);
-            border-color: #e75480;
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-        
-        /* SECCIÓN DE TEXTO ELEGANTE */
-        .elegance-section {
-            padding: 80px 0;
-            background: rgba(255, 255, 255, 0.7);
-            border-radius: 20px;
-            margin: 40px 0;
-            border: 1px dashed #ffb6c1;
-        }
-        
-        .elegance-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .elegance-content h4 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            color: #e75480;
-            margin-bottom: 30px;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .elegance-content h4::after {
-            content: '';
-            position: absolute;
-            width: 100px;
-            height: 3px;
-            background: linear-gradient(to right, transparent, #e75480, transparent);
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        .highlight-text {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            border-left: 5px solid #e75480;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            text-align: left;
-            margin-top: 40px;
-        }
-        
-        .highlight-text p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            color: #6d4c5c;
-            line-height: 1.8;
-        }
-        
-        .highlight-text strong {
-            color: #e75480;
-            font-weight: 600;
-        }
-        
-        /* BENEFICIOS */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-        
-        .benefit-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            border-top: 4px solid #ffb6c1;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-        }
-        
-        .benefit-card:hover {
-            transform: translateY(-10px);
-            border-top-color: #e75480;
-            box-shadow: 0 15px 30px rgba(231, 84, 128, 0.15);
-        }
-        
-        .benefit-card h5 {
-            color: #e75480;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-        
-        /* FOOTER */
-        footer {
-            background: linear-gradient(135deg, #ffa8b5 0%, #ff8da1 100%);
-            padding: 50px 0;
-            text-align: center;
-            margin-top: 80px;
-            border-top: 3px solid #e75480;
+        .hero p { 
+            font-size: 1.2rem; 
+            max-width: 700px; 
+            margin: 0 auto 25px; 
             color: #5a3d3d;
         }
         
-        .footer-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            color: white;
-            margin-bottom: 20px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        .btn { 
+            display: inline-block; 
+            background: #d87093; 
+            color: white; 
+            padding: 12px 30px; 
+            text-decoration: none; 
+            border-radius: 30px; 
+            font-weight: bold; 
+            border: 2px solid #d87093; 
+            transition: all 0.3s;
         }
         
-        .contact-info {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            display: inline-block;
-            margin: 20px 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        .btn:hover { 
+            background: white; 
+            color: #d87093; 
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(216, 112, 147, 0.2);
+        }
+
+        /* CATÁLOGO */
+        .catalog { 
+            padding: 70px 0; 
+            background-color: #ffe6ea;
+            border-top: 1px solid #ffb6c1;
+            border-bottom: 1px solid #ffb6c1;
         }
         
-        .success-message {
-            background: #d4edda;
-            color: #155724;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 30px auto;
-            max-width: 600px;
-            border: 1px solid #c3e6cb;
-            text-align: center;
+        .catalog h2 { 
+            text-align: center; 
+            font-size: 2.5rem; 
+            margin-bottom: 10px; 
+            color: #8b475d; 
         }
         
-        .url-box {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
-            font-family: monospace;
+        .section-subtitle { 
+            text-align: center; 
+            color: #a0526a; 
+            margin-bottom: 40px;
             font-size: 1.1rem;
-            margin: 15px 0;
-            border: 2px solid #e75480;
-            color: #e75480;
-            word-break: break-all;
         }
         
+        .perfume-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; 
+        }
+        
+        .perfume-card { 
+            background: white; 
+            border-radius: 10px; 
+            overflow: hidden; 
+            border: 2px solid #ffb6c1;
+            transition: transform 0.3s;
+            box-shadow: 0 5px 15px rgba(139, 71, 93, 0.1);
+        }
+        
+        .perfume-card:hover { 
+            transform: translateY(-5px); 
+            border-color: #d87093;
+            box-shadow: 0 10px 25px rgba(216, 112, 147, 0.2);
+        }
+        
+        .perfume-img { 
+            height: 200px; 
+            overflow: hidden; 
+            background: #ffe6ea; 
+        }
+        
+        .perfume-img img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+        }
+        
+        .perfume-info { 
+            padding: 20px; 
+        }
+        
+        .perfume-info h3 { 
+            color: #8b475d; 
+            margin-bottom: 10px; 
+            font-size: 1.4rem; 
+        }
+        
+        .perfume-info p { 
+            color: #5a3d3d; 
+            margin-bottom: 20px; 
+            font-size: 0.95rem; 
+        }
+        
+        .btn-card { 
+            background: #d87093; 
+            color: white; 
+            padding: 10px 20px; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            display: inline-block; 
+            border: 1px solid #d87093; 
+            transition: all 0.3s; 
+            font-weight: bold;
+        }
+        
+        .btn-card:hover { 
+            background: white; 
+            color: #d87093; 
+            border-color: #d87093; 
+        }
+
+        /* CONTACTO */
+        .contact { 
+            padding: 70px 0; 
+            text-align: center; 
+            background: #ffb6c1;
+            border-top: 1px solid #d87093;
+        }
+        
+        .contact h2 { 
+            color: #8b475d; 
+            margin-bottom: 15px; 
+            font-size: 2.2rem;
+        }
+        
+        .contact p {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+            color: #5a3d3d;
+        }
+        
+        .contact-links { 
+            margin-top: 20px; 
+        }
+        
+        .contact-links a { 
+            display: inline-block; 
+            margin: 0 10px; 
+            color: #8b475d; 
+            text-decoration: none; 
+            font-size: 1.1rem; 
+            border: 1px solid #8b475d; 
+            padding: 10px 20px; 
+            border-radius: 5px; 
+            transition: all 0.3s; 
+            font-weight: bold;
+            background: white;
+        }
+        
+        .contact-links a:hover { 
+            background: #8b475d; 
+            color: white; 
+        }
+
+        /* FOOTER CON AVISO LEGAL */
+        footer { 
+            padding: 40px 0; 
+            text-align: center; 
+            background: #ffa8b5; 
+            color: #5a3d3d; 
+            border-top: 1px solid #d87093;
+            font-size: 0.85rem; 
+            line-height: 1.5;
+        }
+        
+        .legal { 
+            max-width: 800px; 
+            margin: 0 auto; 
+        }
+        
+        .legal p {
+            margin-bottom: 15px;
+        }
+
         /* RESPONSIVE */
         @media (max-width: 768px) {
-            .logo h1 { font-size: 2.2rem; }
-            .hero h2 { font-size: 2.2rem; }
-            .hero-content { padding: 30px 20px; }
-            .gallery-grid { grid-template-columns: 1fr; }
-            .elegance-content h4 { font-size: 1.8rem; }
-            .highlight-text { padding: 25px; }
+            .hero h2 { font-size: 2rem; }
+            .hero p { font-size: 1.1rem; }
+            .catalog h2 { font-size: 2rem; }
+            .perfume-grid { grid-template-columns: 1fr; }
+            .contact-links a { 
+                display: block; 
+                margin: 10px auto; 
+                max-width: 300px; 
+            }
         }
     </style>
 </head>
 <body>
-    <!-- HEADER ELEGANTE -->
+    <!-- HEADER -->
     <header>
         <div class="container">
-            <div class="logo">
-                <h1>Magali Perfumes Chogan</h1>
-                <p>🌸 Elegancia que deja huella 🌸</p>
-            </div>
+            <h1>Afiliada Oficial de Perfumes Chogan</h1>
+            <p>Representante autorizada - Ventas oficiales</p>
         </div>
     </header>
 
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h2>Perfumes de Alta Concentración</h2>
-                <p>Descubre la exclusiva colección de fragancias Chogan, elaboradas en Italia con esencias concentradas de alta calidad. Cada perfume es una obra maestra diseñada para resaltar tu esencia única.</p>
-                
-                <div class="success-message">
-                    <h3>✅ ¡Tu página web está activa!</h3>
-                    <p>Tu sitio está publicado correctamente en GitHub Pages</p>
-                    <div class="url-box" id="url-display">
-                        https://magali84.github.io/perfumes-magali/
-                    </div>
-                    <p>Guarda este enlace para compartir tu página</p>
-                </div>
-                
-                <button class="btn-primary" onclick="copyUrl()">
-                    📋 Copiar Enlace de tu Página
-                </button>
-            </div>
+            <h2>Descubre el Lujo de los Perfumes Chogan</h2>
+            <p>Tu fragancia de élite, a un clic de distancia. Compra seguro a través de nuestro enlace oficial.</p>
+            <a href="#catalogo" class="btn">Ver Colección Exclusiva</a>
         </div>
     </section>
 
-    <!-- GALERÍA -->
-    <section class="gallery-section">
+    <!-- CATÁLOGO DE PERFUMES -->
+    <section id="catalogo" class="catalog">
         <div class="container">
-            <h3>✨ Nuestra Colección ✨</h3>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://i.ibb.co/S4vZFTC5/IMG-4284.jpg" alt="Perfume Chogan Elegante">
+            <h2>Colección Destacada</h2>
+            <p class="section-subtitle">Selección de fragancias inspiradas en acordes olfativos de lujo.</p>
+
+            <div class="perfume-grid">
+                <!-- CHOGAN NOIR -->
+                <div class="perfume-card">
+                    <div class="perfume-img">
+                        <img src="https://i.ibb.co/tMR7XkC9/ef7e686c-7c4b-4a2e-b15d-d4d45cfeb5ae.jpg" alt="Chogan Noir - Fragancia intensa con notas de pachulí y ámbar">
+                    </div>
+                    <div class="perfume-info">
+                        <h3>Chogan Noir</h3>
+                        <p>Una fragancia intensa y misteriosa con notas profundas de pachulí, ámbar y cuero. Inspirada en acordes orientales y amaderados de alta perfumería.</p>
+                        <a href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" class="btn-card" target="_blank">Comprar Ahora</a>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://i.ibb.co/kVMBdDBt/IMG-4287.jpg" alt="Vista Frontal del Perfume">
+
+                <!-- CHOGAN BLANC -->
+                <div class="perfume-card">
+                    <div class="perfume-img">
+                        <img src="https://i.ibb.co/CpqZHzqy/9c9c10fa-c29b-47fb-8046-3b9dad2be42b.jpg" alt="Chogan Blanc - Fragancia fresca con notas cítricas y florales">
+                    </div>
+                    <div class="perfume-info">
+                        <h3>Chogan Blanc</h3>
+                        <p>Frescura y luminosidad encapsuladas. Notas cítricas de bergamota, un corazón floral suave y un fondo de musk blanco. Evoca elegancia moderna.</p>
+                        <a href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" class="btn-card" target="_blank">Comprar Ahora</a>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://i.ibb.co/Wvdtqp2M/IMG-4286.jpg" alt="Detalle de la Botella">
+
+                <!-- CHOGAN OUD -->
+                <div class="perfume-card">
+                    <div class="perfume-img">
+                        <img src="https://i.ibb.co/9mBvxCwv/IMG-4172.jpg" alt="Chogan Oud - Fragancia opulenta con oud y especias">
+                    </div>
+                    <div class="perfume-info">
+                        <h3>Chogan Oud</h3>
+                        <p>La opulencia hecha fragancia. Combina la riqueza del oud con especias dulces, rosas oscuras y un toque de vainilla. Para ocasiones especiales.</p>
+                        <a href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" class="btn-card" target="_blank">Comprar Ahora</a>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://i.ibb.co/9mS3phL9/IMG-4285.jpg" alt="Diseño Sofisticado">
+
+                <!-- LUXURY LINE -->
+                <div class="perfume-card">
+                    <div class="perfume-img">
+                        <img src="https://i.ibb.co/Ld63jfjq/IMG-4275.jpg" alt="Chogan Luxury Line - Fragancia sofisticada con notas de sándalo y azahar">
+                    </div>
+                    <div class="perfume-info">
+                        <h3>LUXURY LINE</h3>
+                        <p>Una fragancia sofisticada con notas de sándalo y azahar, creada para quienes buscan elegancia atemporal.</p>
+                        <a href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" class="btn-card" target="_blank">Comprar Ahora</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN ELEGANTE -->
-    <section class="elegance-section">
+    <!-- SECCIÓN DE CONTACTO -->
+    <section class="contact">
         <div class="container">
-            <div class="elegance-content">
-                <h4>La Esencia de la Elegancia</h4>
-                
-                <div class="highlight-text">
-                    <p>Los perfumes Chogan representan la perfecta unión entre <strong>calidad, elegancia y personalidad</strong>. Inspirados en las grandes fragancias de la perfumería internacional, están elaborados en Italia con esencias concentradas de alta calidad, pensadas para quienes buscan un aroma <strong>duradero y sofisticado</strong>.</p>
-                    
-                    <p>Cada fragancia está diseñada para <strong>resaltar la esencia de quien la lleva</strong>, acompañándolo en cada momento del día con un aroma envolvente, equilibrado y memorable.</p>
-                </div>
-                
-                <div class="benefits-grid">
-                    <div class="benefit-card">
-                        <h5>Fijación Prolongada</h5>
-                        <p>Una fragancia que perdura desde la mañana hasta la noche, manteniendo su carácter distintivo.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <h5>Evolución Elegante</h5>
-                        <p>Notas que se transforman armoniosamente sobre la piel, creando una experiencia única.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <h5>Intensidad Equilibrada</h5>
-                        <p>Un perfume intenso pero nunca invasivo, perfecto para cualquier ocasión.</p>
-                    </div>
-                </div>
-                
-                <p style="margin-top: 40px; font-style: italic; color: #e75480; font-size: 1.2rem;">
-                    "Desde notas frescas y ligeras hasta acordes intensos y sensuales, la colección Chogan se adapta a <strong>todos los estilos, personalidades y ocasiones</strong>."
-                </p>
+            <h2>¿Necesitas Ayuda para Elegir?</h2>
+            <p>Contáctanos para asesoría personalizada sobre las fragancias.</p>
+            <div class="contact-links">
+                <a href="mailto:ladron73@outlook.com">📧 ladron73@outlook.com</a>
+                <a href="https://wa.me/4915223288562" target="_blank">📱 +49 1522 3288562</a>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- FOOTER CON AVISO LEGAL -->
     <footer>
         <div class="container">
-            <div class="footer-logo">Magali Chogan</div>
-            <p>Afiliada Oficial de Perfumes Chogan</p>
-            
-            <div class="contact-info">
-                <p>📧 Email: magali@chogan-perfumes.com</p>
-                <p>📍 Desde Italia para el mundo</p>
+            <div class="legal">
+                <p><strong>Aviso Legal:</strong> Este sitio es operado por una afiliada independiente de Chogan. Las compras se realizan en el sitio oficial de Chogan a través de enlaces de afiliado. Este sitio recibe una comisión por ventas referidas. "Chogan" es una marca registrada. Los perfumes presentados están inspirados en acordes olfativos populares.</p>
+                <p style="margin-top:15px;">&copy; <span id="current-year">2024</span> Afiliada Oficial de Perfumes Chogan. Todos los derechos reservados.</p>
             </div>
-            
-            <p style="margin-top: 20px; font-size: 0.9rem;">
-                &copy; 2024 Magali - Afiliada de Perfumes Chogan<br>
-                Página creada con ❤️ usando GitHub Pages
-            </p>
         </div>
     </footer>
 
     <script>
-        // Función para copiar URL
-        function copyUrl() {
-            const url = document.getElementById('url-display').innerText;
-            navigator.clipboard.writeText(url).then(() => {
-                alert('✅ ¡Enlace copiado!\n\n' + url + '\n\nPega este enlace para compartir tu página web.');
-            }).catch(err => {
-                console.error('Error al copiar: ', err);
-                prompt('Copiar enlace manualmente:', url);
-            });
-        }
-        
-        // Actualizar URL automáticamente
-        function updateUrl() {
-            const repoName = window.location.hostname.includes('github.io') 
-                ? window.location.pathname.split('/')[1] 
-                : 'perfumes-magali';
-            
-            const url = `https://magali84.github.io/${repoName}/`;
-            document.getElementById('url-display').innerText = url;
-        }
-        
-        // Ejecutar al cargar
-        document.addEventListener('DOMContentLoaded', updateUrl);
-        
-        // Efecto de confeti al hacer clic en el botón
-        document.querySelector('.btn-primary').addEventListener('click', function() {
-            this.style.animation = 'none';
-            setTimeout(() => {
-                this.style.animation = '';
-            }, 10);
-        });
+        document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
