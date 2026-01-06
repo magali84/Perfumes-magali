@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumes Chogan | Magali - Afiliada Oficial</title>
+    
+    <!-- Fuentes Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* RESET Y ESTILOS BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fff5f7 0%, #ffeef1 100%);
+            color: #6d4c5c;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* HEADER ELEGANTE */
+        header {
+            background: linear-gradient(135deg, #ffb6c1 0%, #ff99aa 100%);
+            padding: 25px 0;
+            text-align: center;
+            border-bottom: 3px solid #e75480;
+            box-shadow: 0 4px 20px rgba(231, 84, 128, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: float 20s linear infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(-50px, -50px) rotate(360deg); }
+        }
+        
+        .logo {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .logo h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        
+        .logo p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-style: italic;
+            letter-spacing: 2px;
+        }
+        
+        /* HERO SECTION */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-content {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(231, 84, 128, 0.15);
+            border: 2px solid #ffb6c1;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content::before {
+            content: '🌸';
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            font-size: 100px;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #e75480;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            color: #6d4c5c;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* BOTÓN PRINCIPAL */
+        .btn-primary {
+            display: inline-block;
+            background: linear-gradient(135deg, #e75480 0%, #ff6b9d 100%);
+            color: white;
+            padding: 16px 45px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(231, 84, 128, 0.3);
+            position: relative;
+            z-index: 2;
+            letter-spacing: 1px;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 25px rgba(231, 84, 128, 0.4);
+            background: linear-gradient(135deg, #ff6b9d 0%, #e75480 100%);
+        }
+        
+        /* GALERÍA DE IMÁGENES */
+        .gallery-section {
+            padding: 60px 0;
+        }
+        
+        .gallery-section h3 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            font-size: 2.3rem;
+            color: #e75480;
+            margin-bottom: 40px;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .gallery-item {
+            border-radius: 15px;
+            overflow: hidden;
+            height: 300px;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            border: 3px solid #ffb6c1;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px) rotate(1deg);
+            box-shadow: 0 20px 40px rgba(231, 84, 128, 0.25);
+            border-color: #e75480;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* SECCIÓN DE TEXTO ELEGANTE */
+        .elegance-section {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 20px;
+            margin: 40px 0;
+            border: 1px dashed #ffb6c1;
+        }
+        
+        .elegance-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .elegance-content h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #e75480;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .elegance-content h4::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(to right, transparent, #e75480, transparent);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .highlight-text {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            border-left: 5px solid #e75480;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: left;
+            margin-top: 40px;
+        }
+        
+        .highlight-text p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #6d4c5c;
+            line-height: 1.8;
+        }
+        
+        .highlight-text strong {
+            color: #e75480;
+            font-weight: 600;
+        }
+        
+        /* BENEFICIOS */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .benefit-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border-top: 4px solid #ffb6c1;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            border-top-color: #e75480;
+            box-shadow: 0 15px 30px rgba(231, 84, 128, 0.15);
+        }
+        
+        .benefit-card h5 {
+            color: #e75480;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        /* FOOTER */
+        footer {
+            background: linear-gradient(135deg, #ffa8b5 0%, #ff8da1 100%);
+            padding: 50px 0;
+            text-align: center;
+            margin-top: 80px;
+            border-top: 3px solid #e75480;
+            color: #5a3d3d;
+        }
+        
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+        
+        .contact-info {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px auto;
+            max-width: 600px;
+            border: 1px solid #c3e6cb;
+            text-align: center;
+        }
+        
+        .url-box {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 1.1rem;
+            margin: 15px 0;
+            border: 2px solid #e75480;
+            color: #e75480;
+            word-break: break-all;
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .logo h1 { font-size: 2.2rem; }
+            .hero h2 { font-size: 2.2rem; }
+            .hero-content { padding: 30px 20px; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .elegance-content h4 { font-size: 1.8rem; }
+            .highlight-text { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER ELEGANTE -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Magali Perfumes Chogan</h1>
+                <p>🌸 Elegancia que deja huella 🌸</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Perfumes de Alta Concentración</h2>
+                <p>Descubre la exclusiva colección de fragancias Chogan, elaboradas en Italia con esencias concentradas de alta calidad. Cada perfume es una obra maestra diseñada para resaltar tu esencia única.</p>
+                
+                <div class="success-message">
+                    <h3>✅ ¡Tu página web está activa!</h3>
+                    <p>Tu sitio está publicado correctamente en GitHub Pages</p>
+                    <div class="url-box" id="url-display">
+                        https://magali84.github.io/perfumes-magali/
+                    </div>
+                    <p>Guarda este enlace para compartir tu página</p>
+                </div>
+                
+                <button class="btn-primary" onclick="copyUrl()">
+                    📋 Copiar Enlace de tu Página
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="gallery-section">
+        <div class="container">
+            <h3>✨ Nuestra Colección ✨</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://i.ibb.co/S4vZFTC5/IMG-4284.jpg" alt="Perfume Chogan Elegante">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.ibb.co/kVMBdDBt/IMG-4287.jpg" alt="Vista Frontal del Perfume">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.ibb.co/Wvdtqp2M/IMG-4286.jpg" alt="Detalle de la Botella">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.ibb.co/9mS3phL9/IMG-4285.jpg" alt="Diseño Sofisticado">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN ELEGANTE -->
+    <section class="elegance-section">
+        <div class="container">
+            <div class="elegance-content">
+                <h4>La Esencia de la Elegancia</h4>
+                
+                <div class="highlight-text">
+                    <p>Los perfumes Chogan representan la perfecta unión entre <strong>calidad, elegancia y personalidad</strong>. Inspirados en las grandes fragancias de la perfumería internacional, están elaborados en Italia con esencias concentradas de alta calidad, pensadas para quienes buscan un aroma <strong>duradero y sofisticado</strong>.</p>
+                    
+                    <p>Cada fragancia está diseñada para <strong>resaltar la esencia de quien la lleva</strong>, acompañándolo en cada momento del día con un aroma envolvente, equilibrado y memorable.</p>
+                </div>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <h5>Fijación Prolongada</h5>
+                        <p>Una fragancia que perdura desde la mañana hasta la noche, manteniendo su carácter distintivo.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h5>Evolución Elegante</h5>
+                        <p>Notas que se transforman armoniosamente sobre la piel, creando una experiencia única.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h5>Intensidad Equilibrada</h5>
+                        <p>Un perfume intenso pero nunca invasivo, perfecto para cualquier ocasión.</p>
+                    </div>
+                </div>
+                
+                <p style="margin-top: 40px; font-style: italic; color: #e75480; font-size: 1.2rem;">
+                    "Desde notas frescas y ligeras hasta acordes intensos y sensuales, la colección Chogan se adapta a <strong>todos los estilos, personalidades y ocasiones</strong>."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">Magali Chogan</div>
+            <p>Afiliada Oficial de Perfumes Chogan</p>
+            
+            <div class="contact-info">
+                <p>📧 Email: magali@chogan-perfumes.com</p>
+                <p>📍 Desde Italia para el mundo</p>
+            </div>
+            
+            <p style="margin-top: 20px; font-size: 0.9rem;">
+                &copy; 2024 Magali - Afiliada de Perfumes Chogan<br>
+                Página creada con ❤️ usando GitHub Pages
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Función para copiar URL
+        function copyUrl() {
+            const url = document.getElementById('url-display').innerText;
+            navigator.clipboard.writeText(url).then(() => {
+                alert('✅ ¡Enlace copiado!\n\n' + url + '\n\nPega este enlace para compartir tu página web.');
+            }).catch(err => {
+                console.error('Error al copiar: ', err);
+                prompt('Copiar enlace manualmente:', url);
+            });
+        }
+        
+        // Actualizar URL automáticamente
+        function updateUrl() {
+            const repoName = window.location.hostname.includes('github.io') 
+                ? window.location.pathname.split('/')[1] 
+                : 'perfumes-magali';
+            
+            const url = `https://magali84.github.io/${repoName}/`;
+            document.getElementById('url-display').innerText = url;
+        }
+        
+        // Ejecutar al cargar
+        document.addEventListener('DOMContentLoaded', updateUrl);
+        
+        // Efecto de confeti al hacer clic en el botón
+        document.querySelector('.btn-primary').addEventListener('click', function() {
+            this.style.animation = 'none';
+            setTimeout(() => {
+                this.style.animation = '';
+            }, 10);
+        });
+    </script>
+</body>
+</html>
